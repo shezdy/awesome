@@ -42,7 +42,7 @@ client.connect_signal("request::titlebars", function(c)
             {
                 {
                     -- Left
-                    margins = theme.bar_margin,
+                    margins = dpi(5),
                     widget = wibox.container.margin
                         {
                             awful.titlebar.widget.iconwidget(c),

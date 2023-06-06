@@ -42,7 +42,7 @@ theme.bar_height = dpi(32)
 theme.bar_margin = dpi(8)
 
 theme.border_width = dpi(0)
-theme.floating_border_width = dpi(2)
+theme.floating_border_width = dpi(0)
 theme.border_single_client = false
 theme.widget_border_width = dpi(2)
 
