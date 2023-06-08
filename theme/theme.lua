@@ -177,7 +177,7 @@ theme.layout_txt_magnifier                      = "[m]"
 theme.layout_txt_floating                       = "{}="
 
 -- fallback image if current media has no image
-theme.player_default_img                        = theme.home_path .. ".config/awesome/theme/assets/player.png"
+theme.media_default_img                         = asset_path .. "media.png"
 
 -- bling task preview
 theme.task_preview_widget_border_radius         = 10         -- Border radius of the widget (With AA)

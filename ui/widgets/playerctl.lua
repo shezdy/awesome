@@ -43,8 +43,8 @@ local playerctl = bling.signal.playerctl.lib({
 -- set markup using metadata
 playerctl:connect_signal("metadata", function(_, title, artist, album_path, album, new, player_name)
     -- Set art widget
-    if album_path == "" then
-        playerart:set_image(theme.player_default_img)
+    if album_path == "" or album_path == nil then
+        playerart:set_image(theme.media_default_img)
     else
         playerart:set_image(gears.surface.load_uncached(album_path))
     end
@@ -119,4 +119,3 @@ local playerctl_widget = wibox.widget({
 })
 
 return playerctl_widget
-
