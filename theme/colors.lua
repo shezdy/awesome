@@ -34,7 +34,8 @@ c.light_cyan = "#75e0e6"
 c.dark_cyan = "#5cc0c7"
 
 c.fg = c.white
-c.bg = "#19171F"
+-- c.bg = "#19171F"
+c.bg = "#141319"
 c.surface1 = "#201f28"
 c.surface2 = "#2D2B36"
 c.surface3 = c.grey
