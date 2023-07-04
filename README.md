@@ -8,7 +8,8 @@ This is my personal AwesomeWM configuration.
 
 Tested on Arch with awesome-git and on NixOS with overlay for git version.
 
-![screenshot](https://github.com/ddmetz/awesome/assets/77217897/b1c432c4-d55b-43f1-bfe3-846f4fe3bf5c)
+![screenshot](https://github.com/ddmetz/awesome/assets/77217897/c98e7636-554c-4f60-8363-2cc0ab993144)
+
 
 ## dependencies
 TODO
