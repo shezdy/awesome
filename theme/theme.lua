@@ -56,27 +56,27 @@ XColor = xresources.get_current_theme()
 local colors = require("theme.colors")
 
 for k, v in pairs(colors) do
-    theme[k] = v
+	theme[k] = v
 end
 
-theme.bg_normal                                 = theme.bg
-theme.bg_focus                                  = theme.bg
-theme.bg_urgent                                 = theme.bg
-theme.bg_minimize                               = theme.black
-theme.bg_systray                                = theme.bg
+theme.bg_normal = theme.bg
+theme.bg_focus = theme.bg
+theme.bg_urgent = theme.bg
+theme.bg_minimize = theme.black
+theme.bg_systray = theme.bg
 
-theme.fg_normal                                 = theme.pink
-theme.fg_focus                                  = theme.purple
-theme.fg_urgent                                 = theme.orange
-theme.fg_minimize                               = theme.dark_white
+theme.fg_normal = theme.pink
+theme.fg_focus = theme.purple
+theme.fg_urgent = theme.orange
+theme.fg_minimize = theme.dark_white
 
-theme.border_normal                             = theme.surface2
-theme.border_focus                              = theme.surface2
-theme.border_marked                             = theme.surface2
+theme.border_normal = theme.surface2
+theme.border_focus = theme.surface2
+theme.border_marked = theme.surface2
 
 --theme.titlebar_title_enabled = false
-theme.titlebar_bg_focus                         = theme.bg
-theme.titlebar_bg_normal                        = theme.grey1
+theme.titlebar_bg_focus = theme.bg
+theme.titlebar_bg_normal = theme.grey1
 
 -- theme.taglist_fg_focus = theme.background
 -- theme.taglist_fg_occupied = theme.purple
@@ -86,116 +86,113 @@ theme.titlebar_bg_normal                        = theme.grey1
 -- theme.taglist_bg_empty = theme.background
 -- theme.taglist_font = theme.monofont_nosize .. "10"
 
-theme.snap_bg                                   = theme.blue
+theme.snap_bg = theme.blue
 
-theme.notification_border_color                 = theme.bg
+theme.notification_border_color = theme.bg
 
-theme.rect_round3                               = function(cr, width, height)
-    gears.shape.rounded_rect(cr, width, height, 3)
+theme.rect_round3 = function(cr, width, height)
+	gears.shape.rounded_rect(cr, width, height, 3)
 end
-theme.rect_round5                               = function(cr, width, height)
-    gears.shape.rounded_rect(cr, width, height, 5)
+theme.rect_round5 = function(cr, width, height)
+	gears.shape.rounded_rect(cr, width, height, 5)
 end
-theme.rect_round8                               = function(cr, width, height)
-    gears.shape.rounded_rect(cr, width, height, 8)
+theme.rect_round8 = function(cr, width, height)
+	gears.shape.rounded_rect(cr, width, height, 8)
 end
-theme.rect_round12                              = function(cr, width, height)
-    gears.shape.rounded_rect(cr, width, height, 12)
+theme.rect_round12 = function(cr, width, height)
+	gears.shape.rounded_rect(cr, width, height, 12)
 end
-theme.taglist_shape                             = theme.rect_round5
+theme.taglist_shape = theme.rect_round5
 
-theme.border_radius                             = dpi(8)
+theme.border_radius = dpi(8)
 
 -- theme.tasklist_disable_task_name = true
 -- theme.tasklist_plain_task_name = true
 -- theme.tasklist_shape = theme.rect_round5
 -- theme.tasklist_spacing = dpi(3)
-local asset_path                                = gfs.get_configuration_dir() .. "theme/assets/"
+local asset_path = gfs.get_configuration_dir() .. "theme/assets/"
 
-local volume_color                              = theme.green
-theme.volume_high                               = gears.color.recolor_image(asset_path .. "volume-high.svg", volume_color)
-theme.volume_medium                             = gears.color.recolor_image(asset_path .. "volume-medium.svg",
-    volume_color)
-theme.volume_low                                = gears.color.recolor_image(asset_path .. "volume-low.svg", volume_color)
-theme.volume_off                                = gears.color.recolor_image(asset_path .. "volume-off.svg", volume_color)
-theme.volume_mute                               = gears.color.recolor_image(asset_path .. "volume-mute.svg", volume_color)
+local volume_color = theme.green
+theme.volume_high = gears.color.recolor_image(asset_path .. "volume-high.svg", volume_color)
+theme.volume_medium = gears.color.recolor_image(asset_path .. "volume-medium.svg", volume_color)
+theme.volume_low = gears.color.recolor_image(asset_path .. "volume-low.svg", volume_color)
+theme.volume_off = gears.color.recolor_image(asset_path .. "volume-off.svg", volume_color)
+theme.volume_mute = gears.color.recolor_image(asset_path .. "volume-mute.svg", volume_color)
 
-theme.net_color                                 = theme.blue
-theme.wifi0                                     = gears.color.recolor_image(asset_path .. "wifi0.svg", theme.net_color)
-theme.wifi1                                     = gears.color.recolor_image(asset_path .. "wifi1.svg", theme.net_color)
-theme.wifi2                                     = gears.color.recolor_image(asset_path .. "wifi2.svg", theme.net_color)
-theme.wifi3                                     = gears.color.recolor_image(asset_path .. "wifi3.svg", theme.net_color)
-theme.wifi4                                     = gears.color.recolor_image(asset_path .. "wifi4.svg", theme.net_color)
-theme.wifi_off                                  = gears.color.recolor_image(asset_path .. "wifi-off.svg", theme
-    .net_color)
-theme.ethernet                                  = gears.color.recolor_image(asset_path .. "ethernet.svg", theme
-    .net_color)
+theme.net_color = theme.blue
+theme.wifi0 = gears.color.recolor_image(asset_path .. "wifi0.svg", theme.net_color)
+theme.wifi1 = gears.color.recolor_image(asset_path .. "wifi1.svg", theme.net_color)
+theme.wifi2 = gears.color.recolor_image(asset_path .. "wifi2.svg", theme.net_color)
+theme.wifi3 = gears.color.recolor_image(asset_path .. "wifi3.svg", theme.net_color)
+theme.wifi4 = gears.color.recolor_image(asset_path .. "wifi4.svg", theme.net_color)
+theme.wifi_off = gears.color.recolor_image(asset_path .. "wifi-off.svg", theme.net_color)
+theme.ethernet = gears.color.recolor_image(asset_path .. "ethernet.svg", theme.net_color)
 
-theme.layout_fairh                              = asset_path .. "layouts/fairh.png"
-theme.layout_fairv                              = asset_path .. "layouts/fairv.png"
-theme.layout_floating                           = asset_path .. "layouts/floating.png"
-theme.layout_magnifier                          = asset_path .. "layouts/magnifier.png"
-theme.layout_max                                = asset_path .. "layouts/max.png"
-theme.layout_fullscreen                         = asset_path .. "layouts/fullscreen.png"
-theme.layout_tilebottom                         = asset_path .. "layouts/tilebottom.png"
-theme.layout_tileleft                           = asset_path .. "layouts/tileleft.png"
-theme.layout_tile                               = asset_path .. "layouts/tile.png"
-theme.layout_tiletop                            = asset_path .. "layouts/tiletop.png"
-theme.layout_spiral                             = asset_path .. "layouts/spiral.png"
-theme.layout_dwindle                            = asset_path .. "layouts/dwindle.png"
-theme.layout_cornernw                           = asset_path .. "layouts/cornernw.png"
-theme.layout_cornerne                           = asset_path .. "layouts/cornerne.png"
-theme.layout_cornersw                           = asset_path .. "layouts/cornersw.png"
-theme.layout_cornerse                           = asset_path .. "layouts/cornerse.png"
-theme                                           = theme_assets.recolor_layout(theme, theme.purple)
+theme.layout_fairh = asset_path .. "layouts/fairh.png"
+theme.layout_fairv = asset_path .. "layouts/fairv.png"
+theme.layout_floating = asset_path .. "layouts/floating.png"
+theme.layout_magnifier = asset_path .. "layouts/magnifier.png"
+theme.layout_max = asset_path .. "layouts/max.png"
+theme.layout_fullscreen = asset_path .. "layouts/fullscreen.png"
+theme.layout_tilebottom = asset_path .. "layouts/tilebottom.png"
+theme.layout_tileleft = asset_path .. "layouts/tileleft.png"
+theme.layout_tile = asset_path .. "layouts/tile.png"
+theme.layout_tiletop = asset_path .. "layouts/tiletop.png"
+theme.layout_spiral = asset_path .. "layouts/spiral.png"
+theme.layout_dwindle = asset_path .. "layouts/dwindle.png"
+theme.layout_cornernw = asset_path .. "layouts/cornernw.png"
+theme.layout_cornerne = asset_path .. "layouts/cornerne.png"
+theme.layout_cornersw = asset_path .. "layouts/cornersw.png"
+theme.layout_cornerse = asset_path .. "layouts/cornerse.png"
+theme = theme_assets.recolor_layout(theme, theme.purple)
 
 -- Icons for Notif Center
-theme.notification_icon                         = asset_path .. "notif.png"
+theme.notification_icon = asset_path .. "notif.png"
 
 -- Titlebar icons
-theme.titlebar_close_button_normal              = asset_path .. "titlebar/close_normal.png"
-theme.titlebar_close_button_focus               = asset_path .. "titlebar/close_focus.png"
-theme.titlebar_minimize_button_normal           = asset_path .. "titlebar/minimize_normal.png"
-theme.titlebar_minimize_button_focus            = asset_path .. "titlebar/minimize_focus.png"
+theme.titlebar_close_button_normal = asset_path .. "titlebar/close_normal.png"
+theme.titlebar_close_button_focus = asset_path .. "titlebar/close_focus.png"
+theme.titlebar_minimize_button_normal = asset_path .. "titlebar/minimize_normal.png"
+theme.titlebar_minimize_button_focus = asset_path .. "titlebar/minimize_focus.png"
 theme.titlebar_maximized_button_normal_inactive = asset_path .. "titlebar/maximized_normal_inactive.png"
-theme.titlebar_maximized_button_focus_inactive  = asset_path .. "titlebar/maximized_focus_inactive.png"
-theme.titlebar_maximized_button_normal_active   = asset_path .. "titlebar/maximized_normal_active.png"
-theme.titlebar_maximized_button_focus_active    = asset_path .. "titlebar/maximized_focus_active.png"
+theme.titlebar_maximized_button_focus_inactive = asset_path .. "titlebar/maximized_focus_inactive.png"
+theme.titlebar_maximized_button_normal_active = asset_path .. "titlebar/maximized_normal_active.png"
+theme.titlebar_maximized_button_focus_active = asset_path .. "titlebar/maximized_focus_active.png"
 
 -- icons for layouts
-theme.layout_txt_tile                           = "[]="
-theme.layout_txt_tileleft                       = "=[]"
-theme.layout_txt_tilebottom                     = "[v]"
-theme.layout_txt_tiletop                        = "[^]"
-theme.layout_txt_fairv                          = "[|]"
-theme.layout_txt_fairh                          = "[-]"
-theme.layout_txt_spiral                         = "[s]"
-theme.layout_txt_dwindle                        = "[d]"
-theme.layout_txt_max                            = "[+]"
-theme.layout_txt_fullscreen                     = "[F]"
-theme.layout_txt_magnifier                      = "[m]"
-theme.layout_txt_floating                       = "{}="
+theme.layout_txt_tile = "[]="
+theme.layout_txt_tileleft = "=[]"
+theme.layout_txt_tilebottom = "[v]"
+theme.layout_txt_tiletop = "[^]"
+theme.layout_txt_fairv = "[|]"
+theme.layout_txt_fairh = "[-]"
+theme.layout_txt_spiral = "[s]"
+theme.layout_txt_dwindle = "[d]"
+theme.layout_txt_max = "[+]"
+theme.layout_txt_fullscreen = "[F]"
+theme.layout_txt_magnifier = "[m]"
+theme.layout_txt_floating = "{}="
 
 -- fallback image if current media has no image
-theme.media_default_img                         = asset_path .. "media.png"
+theme.media_default_img = asset_path .. "media.png"
 
 -- bling task preview
-theme.task_preview_widget_border_radius         = 10         -- Border radius of the widget (With AA)
-theme.task_preview_widget_bg                    = theme.bg   -- The bg color of the widget
-theme.task_preview_widget_border_color          = theme.grey -- The border color of the widget
-theme.task_preview_widget_border_width          = 1          -- The border width of the widget
-theme.task_preview_widget_margin                = dpi(8)     -- The margin of the widget
+theme.task_preview_widget_border_radius = 10 -- Border radius of the widget (With AA)
+theme.task_preview_widget_bg = theme.bg -- The bg color of the widget
+theme.task_preview_widget_border_color = theme.grey -- The border color of the widget
+theme.task_preview_widget_border_width = 1 -- The border width of the widget
+theme.task_preview_widget_margin = dpi(8) -- The margin of the widget
 
-theme.tag_preview_widget_margin                 = dpi(8)
-theme.tag_preview_widget_border_radius          = theme.border_radius
-theme.tag_preview_client_border_radius          = theme.border_radius / 2
-theme.tag_preview_client_opacity                = 1
-theme.tag_preview_client_bg                     = theme.bg
-theme.tag_preview_client_border_color           = theme.bg
-theme.tag_preview_client_border_width           = 0
-theme.tag_preview_widget_bg                     = theme.bg
-theme.tag_preview_widget_border_color           = theme.bg
-theme.tag_preview_widget_border_width           = 0
+theme.tag_preview_widget_margin = dpi(8)
+theme.tag_preview_widget_border_radius = theme.border_radius
+theme.tag_preview_client_border_radius = theme.border_radius / 2
+theme.tag_preview_client_opacity = 1
+theme.tag_preview_client_bg = theme.bg
+theme.tag_preview_client_border_color = theme.bg
+theme.tag_preview_client_border_width = 0
+theme.tag_preview_widget_bg = theme.bg
+theme.tag_preview_widget_border_color = theme.bg
+theme.tag_preview_widget_border_width = 0
 
 -- bling flash focus
 -- theme.flash_focus_start_opacity = 0.8 -- the starting opacity
