@@ -3,6 +3,7 @@ local awful = require("awful")
 local wibox = require("wibox")
 local util = require("util")
 local bling = require("modules.bling")
+local naughty = require("naughty")
 
 -- playerctl widgets
 local playerart = wibox.widget({
@@ -40,8 +41,22 @@ local playerctl = bling.signal.playerctl.lib({
 	player = { "spotify", "%any" },
 })
 
+local active_player = ""
+
 -- set markup using metadata
 playerctl:connect_signal("metadata", function(_, title, artist, album_path, album, new, player_name)
+	active_player = player_name:lower()
+	if #artist == 0 and active_player ~= "spotify" then
+		playerart:set_image(theme.media_default_img)
+		-- playerartist:set_markup("")
+		playerartist:set_markup(util.markup.color(theme.red, SPACE .. player_name .. SPACE))
+		if #title <= 60 then
+			playertitle:set_markup(util.markup.color(theme.orange, title .. SPACE))
+		else
+			playertitle:set_markup(util.markup.color(theme.orange, string.sub(title, 1, 57) .. "..."))
+		end
+		return
+	end
 	-- Set art widget
 	if album_path == "" or album_path == nil then
 		playerart:set_image(theme.media_default_img)
@@ -76,7 +91,7 @@ end)
 --create buttons for playerctl widgets
 playerart:buttons(gears.table.join(awful.button({}, 1, function()
 	for _, c in ipairs(client.get()) do
-		if c.class == "Spotify" then
+		if c.class:lower() == active_player then
 			c:jump_to(false)
 			return
 		end
