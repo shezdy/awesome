@@ -3,7 +3,6 @@ local awful = require("awful")
 local wibox = require("wibox")
 local util = require("util")
 local bling = require("modules.bling")
-local naughty = require("naughty")
 
 -- playerctl widgets
 local playerart = wibox.widget({
@@ -48,7 +47,6 @@ playerctl:connect_signal("metadata", function(_, title, artist, album_path, albu
 	active_player = player_name:lower()
 	if #artist == 0 and active_player ~= "spotify" then
 		playerart:set_image(theme.media_default_img)
-		-- playerartist:set_markup("")
 		playerartist:set_markup(util.markup.color(theme.red, SPACE .. player_name .. SPACE))
 		if #title <= 60 then
 			playertitle:set_markup(util.markup.color(theme.orange, title .. SPACE))
