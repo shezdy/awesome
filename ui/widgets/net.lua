@@ -4,23 +4,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local markup = require("util").markup
 
---- Network Widget
---[[
-󰍁󰌾󰌿󰍀󰍂󰍃󰃛󰃜󰂚󰂛󰂜󰂝󰂞󰂟󰂠󰃨󰐥󰖟󰖩󰖪󰖔󰤄
-󰕾󰕿󰖀󰖁
-󰤟󰤠󰤡󰤢󰤣󰤤󰤥󰤦󰤧󰤨󰤩󰤪󰤫󰤬󰤭󰤮󰤯󰈀󰈁󰈂
-
-󰤯
-
-󰤟
-
-󰤢
-
-󰤥
-
-󰤨
-
-]]
 local function create_wifi_markup(icon, color, net_name)
 	return markup.color(color, icon)
 end
