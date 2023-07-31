@@ -112,22 +112,6 @@ theme.border_radius = dpi(8)
 -- theme.tasklist_spacing = dpi(3)
 local asset_path = gfs.get_configuration_dir() .. "theme/assets/"
 
-local volume_color = theme.green
-theme.volume_high = gears.color.recolor_image(asset_path .. "volume-high.svg", volume_color)
-theme.volume_medium = gears.color.recolor_image(asset_path .. "volume-medium.svg", volume_color)
-theme.volume_low = gears.color.recolor_image(asset_path .. "volume-low.svg", volume_color)
-theme.volume_off = gears.color.recolor_image(asset_path .. "volume-off.svg", volume_color)
-theme.volume_mute = gears.color.recolor_image(asset_path .. "volume-mute.svg", volume_color)
-
-theme.net_color = theme.blue
-theme.wifi0 = gears.color.recolor_image(asset_path .. "wifi0.svg", theme.net_color)
-theme.wifi1 = gears.color.recolor_image(asset_path .. "wifi1.svg", theme.net_color)
-theme.wifi2 = gears.color.recolor_image(asset_path .. "wifi2.svg", theme.net_color)
-theme.wifi3 = gears.color.recolor_image(asset_path .. "wifi3.svg", theme.net_color)
-theme.wifi4 = gears.color.recolor_image(asset_path .. "wifi4.svg", theme.net_color)
-theme.wifi_off = gears.color.recolor_image(asset_path .. "wifi-off.svg", theme.net_color)
-theme.ethernet = gears.color.recolor_image(asset_path .. "ethernet.svg", theme.net_color)
-
 theme.layout_fairh = asset_path .. "layouts/fairh.png"
 theme.layout_fairv = asset_path .. "layouts/fairv.png"
 theme.layout_floating = asset_path .. "layouts/floating.png"

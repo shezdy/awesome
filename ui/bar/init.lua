@@ -19,7 +19,7 @@ local net = get_net({ color = theme.blue })
 local battery = get_battery({ color = theme.cyan })
 
 -- Available layouts, order matters.
-awful.layout.layouts = {
+awful.layout.append_default_layouts({
 	awful.layout.suit.tile,
 	-- awful.layout.suit.tile.left,
 	-- awful.layout.suit.tile.bottom,
@@ -36,7 +36,7 @@ awful.layout.layouts = {
 	-- awful.layout.suit.spiral,
 	-- awful.layout.suit.spiral.dwindle,
 	awful.layout.suit.floating,
-}
+})
 
 local tag_name = ""
 
