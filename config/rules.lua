@@ -81,12 +81,25 @@ awful.rules.rules = {
 			instance = {},
 			class = {
 				"steam_app_920320",
+				"steam_app_1086940",
 				"steam_app_0",
 			},
 			name = {},
 			role = {},
 		},
-		properties = { fullscreen = true },
+		properties = { fullscreen = true, titlebars_enabled = false },
+	},
+
+	{
+		rule_any = {
+			instance = {},
+			class = {
+				"steam_app_1086940",
+			},
+			name = {},
+			role = {},
+		},
+		properties = { floating = false, titlebars_enabled = false },
 	},
 }
 
