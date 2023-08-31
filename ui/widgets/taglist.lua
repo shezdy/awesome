@@ -37,28 +37,29 @@ local taglist_buttons = gears.table.join(
 	end)
 )
 
-bling.widget.tag_preview.enable({
-	show_client_content = true, -- Whether or not to show the client content
-	x = 10, -- The x-coord of the popup
-	y = 10, -- The y-coord of the popup
-	scale = 0.1, -- The scale of the previews compared to the screen
-	honor_padding = false, -- Honor padding when creating widget size
-	honor_workarea = false, -- Honor work area when creating widget size
-	placement_fn = function(c) -- Place the widget using awful.placement (this overrides x & y)
-		awful.placement.next_to(c, {
-			margins = {
-				top = dpi(8),
-				left = 0,
-			},
-		})
-	end,
-	background_widget = wibox.widget({ -- Set a background image (like a wallpaper) for the widget
-		image = "/home/d/Pictures/wallpapers/starry-nebula.png",
-		horizontal_fit_policy = "fit",
-		vertical_fit_policy = "fit",
-		widget = wibox.widget.imagebox,
-	}),
-})
+-- bling.widget.tag_preview.enable({
+-- 	show_client_content = true, -- Whether or not to show the client content
+-- 	x = 10,                  -- The x-coord of the popup
+-- 	y = 10,                  -- The y-coord of the popup
+-- 	scale = 0.1,             -- The scale of the previews compared to the screen
+-- 	honor_padding = false,   -- Honor padding when creating widget size
+-- 	honor_workarea = false,  -- Honor work area when creating widget size
+-- 	placement_fn = function(c) -- Place the widget using awful.placement (this overrides x & y)
+-- 		awful.placement.next_to(c, {
+-- 			margins = {
+-- 				top = dpi(8),
+-- 				left = 0,
+-- 			},
+-- 		})
+-- 	end,
+-- 	background_widget = wibox.widget({
+-- 	                                -- Set a background image (like a wallpaper) for the widget
+-- 		image = "/home/d/Pictures/wallpapers/starry-nebula.png",
+-- 		horizontal_fit_policy = "fit",
+-- 		vertical_fit_policy = "fit",
+-- 		widget = wibox.widget.imagebox,
+-- 	}),
+-- })
 
 -- local function get_taglist(s)
 --     return wibox.widget({
@@ -149,16 +150,16 @@ local function get_taglist(s)
 				update(self, tag)
 
 				--- Tag preview
-				self:connect_signal("mouse::enter", function()
-					if #tag:clients() > 0 then
-						awesome.emit_signal("bling::tag_preview::update", tag)
-						awesome.emit_signal("bling::tag_preview::visibility", s, true)
-					end
-				end)
-
-				self:connect_signal("mouse::leave", function()
-					awesome.emit_signal("bling::tag_preview::visibility", s, false)
-				end)
+				-- self:connect_signal("mouse::enter", function()
+				-- 	if #tag:clients() > 0 then
+				-- 		awesome.emit_signal("bling::tag_preview::update", tag)
+				-- 		awesome.emit_signal("bling::tag_preview::visibility", s, true)
+				-- 	end
+				-- end)
+				--
+				-- self:connect_signal("mouse::leave", function()
+				-- 	awesome.emit_signal("bling::tag_preview::visibility", s, false)
+				-- end)
 			end,
 			update_callback = update,
 		},
