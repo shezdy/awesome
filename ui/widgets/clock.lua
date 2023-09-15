@@ -39,10 +39,10 @@ local clock = wibox.widget({
 			notif_popup.visible = not notif_popup.visible
 		end),
 		awful.button({}, 4, function() -- scroll up
-			util.async("brightness 80")
+			util.async("brightness 80 80")
 		end),
 		awful.button({}, 5, function() -- scroll down
-			util.async("brightness 40")
+			util.async("brightness 40 30")
 		end),
 	},
 	-- format = "<span color='" .. beautiful.purple .. "' >" .. "%a %d %b %I:%M" .. "</span>",
