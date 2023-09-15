@@ -16,7 +16,6 @@ awful.rules.rules = {
 			keys = clientkeys,
 			buttons = clientbuttons,
 			screen = awful.screen.preferred,
-			placement = awful.placement.no_overlap + awful.placement.no_offscreen,
 		},
 	},
 
@@ -44,6 +43,7 @@ awful.rules.rules = {
 				"gnome-calculator",
 				"wezterm-floating",
 				"zoom",
+				"NoiseTorch",
 			},
 			-- Note that the name property shown in xprop might be set slightly after creation of the client
 			-- and the name shown there might not match defined rules here.
@@ -80,6 +80,7 @@ awful.rules.rules = {
 		rule_any = {
 			instance = {},
 			class = {
+				"steam_app_312520",
 				"steam_app_920320",
 				"steam_app_1086940",
 				"steam_app_0",
@@ -87,19 +88,7 @@ awful.rules.rules = {
 			name = {},
 			role = {},
 		},
-		properties = { fullscreen = true, titlebars_enabled = false },
-	},
-
-	{
-		rule_any = {
-			instance = {},
-			class = {
-				"steam_app_1086940",
-			},
-			name = {},
-			role = {},
-		},
-		properties = { floating = false, titlebars_enabled = false },
+		properties = { fullscreen = true },
 	},
 }
 

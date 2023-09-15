@@ -101,7 +101,6 @@ local function table_contains(tbl, x)
 	return found
 end
 
--- Make all floating windows on top
 client.connect_signal("property::floating", function(c)
 	if not c.fullscreen then
 		if not c.floating or c.maximized then
@@ -127,9 +126,13 @@ client.connect_signal("manage", function(c)
 			not table_contains(no_titlbars_name, c.name)
 			and not table_contains(no_titlbars_class, c.class)
 			and not c.maximized
+			and not c.fullscreen
 		then
 			awful.titlebar.show(c)
 			c.border_width = beautiful.floating_border_width
+		else
+			awful.titlebar.hide(c)
+			c.border_width = beautiful.border_width
 		end
 	else
 		awful.titlebar.hide(c)
