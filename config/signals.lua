@@ -168,6 +168,11 @@ client.connect_signal("mouse::enter", function(c)
 	c:activate({ context = "mouse_enter", raise = false })
 end)
 
+-- Switch to tag when a client is activated
+client.connect_signal("request::activate", function(c)
+	awful.ewmh.activate(c, context, { switch_to_tag = true, raise = false })
+end)
+
 -- bling.module.flash_focus.enable()
 
 -- client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
