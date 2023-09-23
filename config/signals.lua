@@ -169,8 +169,12 @@ client.connect_signal("mouse::enter", function(c)
 end)
 
 -- Switch to tag when a client is activated
-client.connect_signal("request::activate", function(c)
-	awful.ewmh.activate(c, context, { switch_to_tag = true, raise = false })
+client.connect_signal("request::activate", function(c, context)
+	if context == "client.movetoscreen" or context == "screen.focus" then
+		awful.ewmh.activate(c, context, { switch_to_tag = false, raise = false })
+	else
+		awful.ewmh.activate(c, context, { switch_to_tag = true, raise = false })
+	end
 end)
 
 -- bling.module.flash_focus.enable()
