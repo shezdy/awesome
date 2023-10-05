@@ -13,7 +13,7 @@ local notif_popup = awful.popup({
 			margins = { top = beautiful.bar_height + dpi(10), right = dpi(10) },
 		})
 	end,
-	border_color = beautiful.black,
+	border_color = beautiful.surface0,
 	border_width = dpi(1),
 })
 

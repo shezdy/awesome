@@ -42,7 +42,7 @@ theme.bar_height = dpi(32)
 theme.bar_margin = dpi(8)
 
 theme.border_width = dpi(0)
-theme.floating_border_width = dpi(0)
+theme.floating_border_width = dpi(1)
 theme.border_single_client = false
 theme.widget_border_width = dpi(2)
 
@@ -70,9 +70,9 @@ theme.fg_focus = theme.purple
 theme.fg_urgent = theme.orange
 theme.fg_minimize = theme.dark_white
 
-theme.border_normal = theme.surface2
-theme.border_focus = theme.surface2
-theme.border_marked = theme.surface2
+theme.border_normal = theme.surface0
+theme.border_focus = theme.surface0
+theme.border_marked = theme.surface0
 
 --theme.titlebar_title_enabled = false
 theme.titlebar_bg_focus = theme.bg
