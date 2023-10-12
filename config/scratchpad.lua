@@ -11,8 +11,8 @@ local anim = rubato.timed({
 	awestore_compat = true, -- This option must be set to true.
 })
 
-local w = 1080
-local h = 720
+local w = 1440
+local h = 900
 
 local file_scratch = bling.module.scratchpad:new({
 	command = "dolphin",
