@@ -33,7 +33,7 @@ globalkeys = gears.table.join(
 		awful.spawn.with_shell(HOME_PATH .. "/.fehbg")
 	end), --return to default
 	awful.key({ modkey }, "Menu", function()
-		awful.spawn.with_shell(HOME_PATH .. "/.fehbg")
+		awful.spawn.with_shell(HOME_PATH .. "/.local/bin/scripts/random-wallpaper")
 	end), --return to default
 
 	-- cycle through tags
